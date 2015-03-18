@@ -15,12 +15,19 @@ struct MyString {
 	}
 	
 	MyString(int n, char c) {	// zad
+		if(n >= 99) n = 99;
+		for(int i = 0; i < n; i++)
+			str[i] = c;
+		str[n] = '\0';
 	}
 	
 	int size() {	//zad
+		return strlen(str);
 	}
 	
-	void append(MyString S) {	//zad
+	void append(MyString S) {
+		if(size() + strlen(S.str) >= 99) return;
+		strcat(str, S.str);
 	}
 	
 	void printToStdout() {	//zad
@@ -28,12 +35,19 @@ struct MyString {
 	}
 	
 	bool isEquel(MyString S) {	//zad
+		return strcmp(str, S.str) == 0;
 	}
 };
 
 int main() {
-	MyString A, B("abc"), C("def";
+	MyString A, B("abc"), C(5, 'V');
 	A.printToStdout();
 	B.printToStdout();
-	C.append(B);
+	C.printToStdout();
+	B.append(C);
+	B.printToStdout();
+	if(A.isEquel(A))
+		cout << "isti" << endl;
+	else
+		cout << "razliciti" << endl;
 }
