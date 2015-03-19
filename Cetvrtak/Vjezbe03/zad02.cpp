@@ -16,19 +16,25 @@ struct MyString {
     }
 
     MyString(int n, char c) {
-        //zad
+        if(n > 99) n = 99;
+
+        for(int i = 0; i < n; i++)
+            str[i] = c;
+
+        str[n] = '\0';
     }
 
     int size() {
-        //zad
+        return strlen(str);
     }
 
     void append(MyString s) {
-        //zad
+        if(size() + s.size() > 99) return;
+        strcat(str, s.str);
     }
 
     bool isEquel(MyString s) {
-        //zad
+        return strcmp(str, s.str) == 0;
     }
 
     void printToStdout() {
@@ -37,8 +43,13 @@ struct MyString {
 };
 
 int main() {
-    MyString A, B("pmf");
+    MyString A, B("pmf"), C(3, 'V');
     A.printToStdout();
     B.printToStdout();
+    C.printToStdout();
+    C.append(B);
+    C.printToStdout();
+    if(!A.isEquel(B)) cout << "Razlici" << endl;
+    if(C.isEquel(C)) cout << "Isti" << endl;
     return 0;
 }
