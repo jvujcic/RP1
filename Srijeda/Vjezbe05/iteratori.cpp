@@ -23,14 +23,15 @@ int main() {
         cout << *it << endl;
     }
 
-    for(it = L.begin(); it != L.end(); ++it) {
-         if(*it == 2) {
+    for(it = L.begin(); it != L.end(); ) {
+        if(*it == 2) {
         //     list<int>::iterator it_temp;
         //     it_temp = it;
         //     it_temp++;
             it = L.erase(it);
             // it = it_temp;
         }
+        else ++it;
     }
 
     for(it = L.begin(); it != L.end(); ++it) {
