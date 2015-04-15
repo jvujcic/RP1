@@ -53,7 +53,7 @@ int main() {
     cout << endl;
 
     it = S.find(4);
-    *it = 5;
+    //*it = 5;  ovo NE
     
     return 0;
 }
