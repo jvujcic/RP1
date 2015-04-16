@@ -1,0 +1,6 @@
+EM1 EM2 LA2 DM x 220
+LA2 DifR AS x 270
+MA2 DifR Vj NM MMuB x 220
+kraj
+DifR
+
