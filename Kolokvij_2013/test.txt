@@ -3,4 +3,3 @@ LA2 DifR AS x 270
 MA2 DifR Vj NM MMuB x 220
 kraj
 DifR
-
