@@ -3,10 +3,13 @@
 #include <set>
 #include <string>
 #include <utility>
+#include <cstdio>
 
 using namespace std;
 
 int main() {
+    freopen("test.txt", "r", stdin);
+
     map<string, pair<set<string>, int> > mapaKolegija;
 
     while(true) {
