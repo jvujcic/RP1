@@ -41,17 +41,6 @@ public:
 	}
 };
 
-class Paralelogram : public Cetverokut {
-public:
-	float kut;
-	Paralelogram(float a, float b, float k) : Cetverokut(a, b, a, b), kut(k) {
-		cout << "Kreiran je paralelogram" << endl;
-	}
-	~Paralelogram() {
-		cout << "Kreiran je paralelogram" << endl;
-	}
-}
-
 int main() {
 	//Cetverokut A(1, 2, 2, 3);
 	//Pravokutnik P(1, 2);
