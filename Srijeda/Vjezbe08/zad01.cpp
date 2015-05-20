@@ -30,9 +30,33 @@ public:
 	
 };
 
+class Kvadrat : public Pravokutnik {
+public:
+	Kvadrat(float a) : Pravokutnik(a, a) {
+		cout << "Kreiran je kvadrat: " << a << endl;
+	}
+	
+	~Kvadrat() {
+		cout << "Unisten je kvadrat: " << a << endl;
+	}
+};
+
+class Paralelogram : public Cetverokut {
+public:
+	float kut;
+	Paralelogram(float a, float b, float k) : Cetverokut(a, b, a, b), kut(k) {
+		cout << "Kreiran je paralelogram" << endl;
+	}
+	~Paralelogram() {
+		cout << "Kreiran je paralelogram" << endl;
+	}
+}
+
 int main() {
 	//Cetverokut A(1, 2, 2, 3);
-	Pravokutnik P(1, 2);
+	//Pravokutnik P(1, 2);
 	//cout << A.opseg() << endl;
+	Kvadrat K(5);
+	cout << K.opseg() << endl;
 	return 0;
 }
