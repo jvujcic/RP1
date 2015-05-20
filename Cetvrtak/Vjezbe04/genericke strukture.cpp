@@ -1,4 +1,4 @@
-template<type T>
+template<class T>
 struct Stack {
     T podaci[100];
     int vrh;
